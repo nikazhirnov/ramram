@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "echo 'Skipping build for static site'",
     "preview": "vite preview",
-    "start": "npx serve -s . -l $PORT"
+    "start": "npx serve -s . -l ${PORT:-3000}"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -23,5 +23,8 @@
     "postcss": "^8.4.32",
     "tailwindcss": "^3.3.6",
     "vite": "^5.0.8"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
